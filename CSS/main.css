@@ -23,4 +23,8 @@ body {
 /* End Global Rules */
 #mortgage-amount {
   width: 96%;
+  height: 100%;
+  &:focus {
+    outline: none;
+  }
 }
