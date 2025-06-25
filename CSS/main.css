@@ -21,3 +21,6 @@ body {
   background-color: var(--Slate-100);
 }
 /* End Global Rules */
+#mortgage-amount {
+  width: 96%;
+}
