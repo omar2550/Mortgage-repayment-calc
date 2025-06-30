@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <title>Mortgage repayment calculator</title>
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body class="d-flex justify-content-center align-items-center">
+  <main class="container">
+    <section class="bg-white rounded-4 my-3 mx-auto d-sm-flex">
+      <div class="form-container p-4">
+        <div class="d-sm-flex justify-content-between align-items-center mb-4">
+          <h1>Mortgage Calculator</h1>
+          <span class="clear-all slate-700 pointer">Clear All</span>
+        </div>
+        <form action="">
+          <div class="input-box mb-4">
+            <label for="m-amount" class="slate-700">Mortgage Amount</label>
+            <div class="input d-flex border rounded-3 w-100 mt-2">
+              <span class="sign h-100 bg-slate-100 p-2 slate-700 d-inline-block">
+                $
+              </span>
+              <input id="m-amount" class="border-0 slate-900 fw-bold" type="text" name="amount">
+            </div>
+            <div class="error"></div>
+          </div>
+          <div class="d-sm-flex gap-3">
+            <div class="input-box mb-4 mb-sm-0">
+            <label for="m-term" class="slate-700">Mortgage Term</label>
+            <div class="input d-flex border rounded-3 w-100 mt-2">
+              <input id="m-term" class="border-0 slate-900 fw-bold" type="text" name="term">
+              <span class="sign h-100 bg-slate-100 p-2 slate-700 d-inline-block">
+                years
+              </span>
+            </div>
+            <div class="error"></div>
+          </div>
+          <div class="input-box mb-4">
+            <label for="m-rate" class="slate-700">Interest Rate</label>
+            <div class="input d-flex border rounded-3 w-100 mt-2">
+              <input id="m-rate" class="border-0 slate-900 fw-bold" type="text" name="rate">
+              <span class="sign bg-slate-100 p-2 slate-700 d-inline-block">
+                %
+              </span>
+            </div>
+            <div class="error"></div>
+          </div>
+          </div>
+          <div class="input-box mb-4">
+            <label class="slate-700">Mortgage Type</label>
+            <label for="repay" class="d-flex pointer slate-900 align-items-center p-2 fw-bold border rounded-3 w-100 mt-2">
+              <input id="repay" class="d-none" type="radio" name="m-type">
+              <span class="dot repay"></span>
+              Repayment
+            </label>
+            <label for="inter" class="d-flex pointer slate-900 align-items-center p-2 fw-bold border rounded-3 w-100 mt-2">
+              <input id="inter" class="d-none" type="radio" name="m-type">
+              <span class="dot inter"></span>
+              Interest Only
+            </label>
+            <div class="error"></div>
+          </div>
+          <button class="d-flex bg-lime slate-900 fw-bold gap-3 align-items-center justify-content-center p-3 w-100 rounded-pill border-0 ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#133041" d="M18.75 2.25H5.25a1.5 1.5 0 0 0-1.5 1.5v16.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V3.75a1.5 1.5 0 0 0-1.5-1.5Zm-10.5 16.5a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 18.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 15a1.125 1.125 0 1 1 0-2.25A1.125 1.125 0 0 1 12 15Zm3.75 3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm1.5-5.25a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 .75.75v3.75Z"/></svg>
+            <span>Calculate Repayments</span>
+          </button>
+        </form>
+      </div>
+      <div class="result-sec align-content-center bg-slate-900 mt-3 mt-sm-0 p-5">
+        <div class="text-center my-auto">
+          <img src="assets/images/illustration-empty.svg" alt="">
+          <h3 class="text-light mt-3 mb-2">Results shown here</h3>
+          <p class="text-white-50 m-0">
+            Complete the form and click “calculate repayments” to see what 
+            your monthly repayments would be.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="JS/main.js"></script>
+</body>
+</html>
